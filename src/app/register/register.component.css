@@ -1,0 +1,91 @@
+
+i {
+    margin: 0 10px;
+    color: #aaa;
+    cursor: default;
+  }
+  #loginpage{
+    height: 100%;
+    background-image: linear-gradient(#99b898, #feceab,#f7c29d,#2a363b);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+  }
+  
+ 
+  
+  .box {
+      /* position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%); */
+      width: 400px;
+      padding: 40px;
+      background:rgb(226 222 222 / 48%);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+      border-radius: 10px;
+      opacity: 90%;
+  }
+  .box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: black;
+      text-align: center;
+      
+  }
+  box.inputBox
+  {
+      position:relative;
+  }
+  .box .inputBox input ::placeholder{
+    color: white;
+   
+  }
+
+  .box .inputBox input
+  {
+      width: 100%;
+      padding: 10px 10px 10px 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      outline: none;
+      background: transparent;
+  }
+ 
+  
+  .box input[type="submit"]
+  {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #03425e;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  .box p
+  {
+       color: black;
+  }
+  .box a
+  {
+    text-decoration-line: none;
+      color:#006435;
+  }
+  
+  .box-container{
+    display:flex;justify-content:center;align-items:center;
+    min-height:75vh;
+  }
+  
+  .btn{
+    background: #2a363b;
+    color: white;
+}

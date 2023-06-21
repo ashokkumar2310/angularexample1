@@ -1,0 +1,48 @@
+
+
+<nav aria-label="breadcrumb" style="padding:20px 20px 0px 20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Users</li>
+  </ol>
+</nav>
+
+
+<div class="container text-center" style="padding:20px 20px 20px 20px;">
+  <div class="row justify-content-center ">
+    <div class="col-md-9">
+      <input class="form-control" type="text" placeholder="search" [(ngModel)]="searchText">
+    </div>
+   
+  </div>
+</div>
+<div class="container mat-elevation-z8">
+
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Nid</th>
+        <th>Status</th>
+        <th>Role</th>
+        <th class="text-center">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of userlist | search:searchText">
+       <td>{{e.user_fullname}}</td>
+       <td>{{e.user_Nid}}</td>
+       <td>{{e.user_isactive ? 'Active':'In Active'}}</td>
+       <td>{{e.user_role ===''? 'Un Assigned':e.user_role}}</td>
+        <td class="text-center">
+          <button *ngIf="e.user_role !=='admin'" (click)="updateuser(e.user_Nid)" class="btn">Update</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

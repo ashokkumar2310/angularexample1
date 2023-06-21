@@ -1,0 +1,84 @@
+
+<div class="container">
+  <div class=" boar">
+    <a routerLink="/application">
+
+      <div class="card mb-4 box-shadow">
+
+        <div class="card-body">
+          <strong>
+            <h2>Application Inventory</h2>
+          </strong>
+          <li class="card-text">view all the details of Application</li>
+          <li *ngIf="role==='admin'" class="card-text">edit the details</li>
+          <li *ngIf="role==='admin'" class="card-text">delete the details</li>
+          <div class="d-flex justify-content-between align-items-center">
+
+
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div *ngIf="role==='admin'" class="boar">
+    <a routerLink="/user">
+
+      <div class="card mb-4">
+
+        <div class="card-body">
+          <strong>
+            <h2>Users Inventory</h2>
+          </strong>
+          <li class="card-text">view all the details of Users</li>
+          <li  class="card-text">edit the active status of user</li>
+
+          <div class="d-flex justify-content-between align-items-center">
+
+
+          </div>
+        </div>
+      </div>
+
+    </a>
+  </div>
+  <div  class="boar">
+    <a >
+
+      <div class="card mb-4">
+
+        <div class="card-body">
+          <strong>
+            <h2>Shift Schedule</h2>
+          </strong>
+          <li class="card-text">view all the details of Schedule</li>
+          <li *ngIf="role==='admin'" class="card-text">edit the schedule</li>
+
+          <div class="d-flex justify-content-between align-items-center">
+
+
+          </div>
+        </div>
+      </div>
+
+    </a>
+  </div>
+  <div class="boar">
+    <a>
+
+      <div class="card mb-4">
+
+        <div class="card-body">
+          <strong>
+            <h2>New Joinee Assist</h2>
+          </strong>
+
+          <div class="d-flex justify-content-between align-items-center">
+
+
+          </div>
+        </div>
+      </div>
+
+    </a>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+
+<nav aria-label="breadcrumb" style="padding:20px 20px 0px 20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/application">Applications</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{currentApplication.application_Name}}</li>
+  </ol>
+</nav>
+<div class="text-center" style="padding: 40px 200px 10px 200px;">
+  <p  style="font-size: 30px; padding-bottom: 10px;"><strong>{{currentApplication.application_Name}}</strong></p>
+  <p> 
+    <label><strong>Business_Usage:</strong></label>
+    {{ currentApplication.business_Usage }}
+  </p>
+<ul class="nav nav-pills nav-fill gap-2 p-1 small  rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color:#99b898; --bs-nav-pills-link-active-bg: var(--bs-white);background: #2a363b;">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"  (click)="ng1()">Contact Details</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false" (click)="ng2()">Servers</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false" (click)="ng3()">Contact</button>
+  </li>
+</ul>
+
+
+
+<div style="padding-top: 30px;">
+<div [hidden]="aso==='fal'" >
+  <div>
+    <label><strong>Point Of Contact:</strong></label>
+    {{ currentApplication.point_Of_Contact }}
+  </div>
+  <div>
+    <label><strong>IT Owner:</strong></label>
+    {{ currentApplication.it_Owner }}
+  </div>
+  <div>
+    <label><strong>SME:</strong></label>
+    {{ currentApplication.sme}}
+  </div>
+  <div>
+    <label><strong>Business Owner:</strong></label>
+    {{ currentApplication.business_Owner }}
+  </div>
+</div>
+<div [hidden]="ash==='fal'">
+  <div>
+    <label><strong>Production_Server:</strong></label>
+    {{ currentApplication.production_Server }}
+  </div>
+  <div>
+    <label><strong>Test_Server:</strong></label>
+    {{ currentApplication.test_Server }}
+  </div>
+  <div>
+    <label><strong>Dev_Server:</strong></label>
+    {{ currentApplication.dev_Server }}
+  </div>
+  <div>
+    <label><strong>DB_Production_Server:</strong></label>
+    {{ currentApplication.db_Production_Server }}
+  </div>
+  <div>
+    <label><strong>DB_Test_Server:</strong></label>
+    {{ currentApplication.db_Test_Server }}
+  </div>
+  <div>
+    <label><strong>DB_Dev_Server:</strong></label>
+    {{ currentApplication.db_Dev_Server }}
+  </div>
+</div>
+<div [hidden]="asho==='fal'">
+ {{asho}}
+</div>
+</div>
+</div>
+
+ 

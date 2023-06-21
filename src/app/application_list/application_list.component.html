@@ -1,0 +1,76 @@
+
+<nav aria-label="breadcrumb" style="padding:20px 20px 0px 20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Applications</li>
+  </ol>
+</nav>
+
+
+<div class="container text-center" style="padding:20px 20px 20px 20px;">
+  <div class="row justify-content-center ">
+    <div class="col-md-9">
+      <input class="form-control" type="text" placeholder="search" [(ngModel)]="searchText">
+    </div>
+    <div *ngIf="role==='admin'" class="col-md-3">
+      <div class="btn" routerLink="/addApplication">
+        Add Application
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+<div class="container mat-elevation-z8">
+
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Application Name</th>
+        <th>IT Owner</th>
+        <th>Business Owner</th>
+        <th overflow-y: hidden>Point of Contact</th>
+        <th overflow-y: hidden>SME</th>
+        <th overflow-y: hidden>Business usage</th>
+        <th overflow-y: hidden>Production Server</th>
+        <th overflow-y: hidden>Test Server</th>
+        <th overflow-y: hidden>Test Server</th>
+        <th overflow-y: hidden>Dev Server</th>
+        <th overflow-y: hidden>DB Production Server</th>
+        <th overflow-y: hidden>DB Test Server</th>
+        <th overflow-y: hidden>DB Dev Server</th>
+        <th *ngIf="role==='admin'" class="text-center">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of Applicationlist | search:searchText">
+        <td><a href="#" routerLink="/application/{{e.application_Name}}">{{e.application_Name}}</a></td>
+        <td>{{e.it_Owner}}</td>
+        <td>{{e.business_Owner}}</td>
+        <td overflow-y: hidden>{{e.point_Of_Contact}}</td>
+        <td overflow-y: hidden>{{e.sme}}</td>
+        <td overflow-y: hidden>{{e.business_Usage}}</td>
+        <td overflow-y: hidden>{{e.production_Server}}</td>
+        <td overflow-y: hidden>{{e.test_Server}}</td>
+        <td overflow-y: hidden>{{e.dev_Server}}</td>
+        <td overflow-y: hidden>{{e.DB_Production_Server}}</td>
+        <td overflow-y: hidden>{{e.DB_Dev_Server}}</td>
+        <td class="text-center">
+          <a style="padding-right: 30px;" *ngIf="role==='admin'" routerLink="/application/edit/{{e.application_Name}}"><i
+              class="bi bi-pencil-fill" style="color: green; font-size: 25px;"></i></a>
+          
+          <a *ngIf="role==='admin'"  (click)="deleteApplication(e.application_Name)" ><i class="bi bi-trash"
+              style="color: red; font-size: 25px;"></i></a>
+              
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+

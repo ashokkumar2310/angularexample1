@@ -1,0 +1,65 @@
+
+
+<nav aria-label="breadcrumb" style="padding:20px 20px 0px 20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/application">Applications</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{application_Name}}</li>
+  </ol>
+</nav>
+
+
+<div class="container mat-elevation-z8" style="margin-top: 30px;padding: 20px 20px 20px 20px;">
+  <p class="text-center" style="font-size: x-large;"><strong>Edit {{application_Name}} Application</strong></p>
+<form #myform="ngForm" (ngSubmit)="updateApp(myform)">
+  <div class="mb-3">
+  <label for="application_Name" class="form-label">Application Name</label>
+  <input type="text" [(ngModel)]="application_Name"  class="form-control" name="application_Name" placeholder="type here.">
+</div>
+<div class="mb-3">
+  <label for="point_Of_Contact" class="form-label">Point Of Contact</label>
+  <input type="text"  [(ngModel)]="point_Of_Contact" class="form-control" name="point_Of_Contact" placeholder="type here.">
+</div>
+<div class="mb-3">
+  <label for="it_Owner" class="form-label">IT Owner</label>
+  <input type="text"  [(ngModel)]="it_Owner" class="form-control" name="it_Owner" placeholder="type here.">
+</div>
+<div class="mb-3">
+  <label for="sme" class="form-label">SME</label>
+  <input type="text"  [(ngModel)]="sme" class="form-control" name="sme" placeholder="type here.">
+</div>
+<div class="mb-3">
+  <label for="business_Usage" class="form-label">Business Usage</label>
+  <textarea class="form-control"  [(ngModel)]="business_Usage" placeholder="type here." name="business_Usage" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="business_Owner" class="form-label">Business Owner</label>
+  <input type="text"  [(ngModel)]="business_Owner" class="form-control" name="business_Owner" placeholder="type here.">
+</div>
+<div class="mb-3">
+  <label for="production_Server" class="form-label">Production Server</label>
+  <textarea class="form-control"  [(ngModel)]="production_Server"  placeholder="seperate servers by ," name="production_Server" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="test_Server" class="form-label">Test Server</label>
+  <textarea class="form-control"  [(ngModel)]="test_Server"  placeholder="seperate servers by ," name="test_Server" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="dev_Server" class="form-label">Dev Server</label>
+  <textarea class="form-control"  [(ngModel)]="dev_Server"  placeholder="seperate servers by ," name="dev_Server" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="db_Production_Server" class="form-label">DB Production Server</label>
+  <textarea class="form-control"  [(ngModel)]="db_Production_Server"  placeholder="seperate servers by ," name="db_Production_Server" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="db_Test_Server" class="form-label">DB Test Server</label>
+  <textarea class="form-control"  [(ngModel)]="db_Test_Server"  placeholder="seperate servers by ," name="db_Test_Server" rows="2"></textarea>
+</div>
+<div class="mb-3">
+  <label for="db_Dev_Server" class="form-label">DB Dev Server</label>
+  <textarea class="form-control"  [(ngModel)]="db_Dev_Server"  placeholder="seperate servers by ," name="db_Dev_Server" rows="2"></textarea>
+</div>
+<input class="btn" type="submit" name="sub" value="Submit">
+</form>
+</div> 

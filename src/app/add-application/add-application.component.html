@@ -1,0 +1,65 @@
+
+
+<nav aria-label="breadcrumb" style="padding:20px 20px 0px 20px">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/application">Applications</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New Application</li>
+  </ol>
+</nav>
+
+
+<div class="container mat-elevation-z8" style="margin-top: 30px;padding: 20px 20px 20px 20px;">
+    <p class="text-center" style="font-size: x-large;"><strong>New Application</strong></p>
+<form [formGroup]="newApp" (ngSubmit)="addApp()">
+    <div class="mb-3">
+    <label for="application_Name" class="form-label">Application Name</label>
+    <input type="text" formControlName="application_Name" class="form-control" id="application_Name" placeholder="type here.">
+  </div>
+  <div class="mb-3">
+    <label for="point_Of_Contact" class="form-label">Point Of Contact</label>
+    <input type="text" formControlName="point_Of_Contact" class="form-control" id="point_Of_Contact" placeholder="type here.">
+  </div>
+  <div class="mb-3">
+    <label for="it_Owner" class="form-label">IT Owner</label>
+    <input type="text" formControlName="it_Owner" class="form-control" id="it_Owner" placeholder="type here.">
+  </div>
+  <div class="mb-3">
+    <label for="sme" class="form-label">SME</label>
+    <input type="text" formControlName="sme" class="form-control" id="sme" placeholder="type here.">
+  </div>
+<div class="mb-3">
+    <label for="business_Usage" class="form-label">Business Usage</label>
+    <textarea class="form-control" formControlName="business_Usage" placeholder="type here." id="business_Usage" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="business_Owner" class="form-label">Business Owner</label>
+    <input type="text" formControlName="business_Owner" class="form-control" id="business_Owner" placeholder="type here.">
+  </div>
+  <div class="mb-3">
+    <label for="production_Server" class="form-label">Production Server</label>
+    <textarea class="form-control" formControlName="production_Server"  placeholder="seperate servers by ," id="production_Server" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="test_Server" class="form-label">Test Server</label>
+    <textarea class="form-control" formControlName="test_Server"  placeholder="seperate servers by ," id="test_Server" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="dev_Server" class="form-label">Dev Server</label>
+    <textarea class="form-control" formControlName="dev_Server"  placeholder="seperate servers by ," id="dev_Server" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="db_Production_Server" class="form-label">DB Production Server</label>
+    <textarea class="form-control" formControlName="db_Production_Server"  placeholder="seperate servers by ," id="db_Production_Server" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="db_Test_Server" class="form-label">DB Test Server</label>
+    <textarea class="form-control" formControlName="db_Test_Server"  placeholder="seperate servers by ," id="db_Test_Server" rows="2"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="db_Dev_Server" class="form-label">DB Dev Server</label>
+    <textarea class="form-control" formControlName="db_Dev_Server"  placeholder="seperate servers by ," id="db_Dev_Server" rows="2"></textarea>
+  </div>
+  <input class="btn" type="submit" name="sub" value="Submit">
+  </form>
+  </div>

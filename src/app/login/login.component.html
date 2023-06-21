@@ -1,0 +1,27 @@
+<div id="loginpage" style="height: 100%;">
+		
+  <div>
+    <div class="row">
+      <div class="col-md-12 box-container"  >
+          <div class="box">
+              <h2><strong>Login</strong></h2>
+              <form  [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+                  <div class="inputBox">
+                      <input type="text" name="Nid" required formControlName="id"  placeholder="Nid" title="Please follow the format N***">
+                      
+                  </div>
+                  <div class="inputBox">
+                      <input type="password" name="password" required formControlName="password" placeholder="Password" title="Text contains only AlphaNumeric ,Space ,@ and Period">
+                      
+                  </div>
+                  <input type="submit" name="sub" value="Submit">
+                  <p>New User?<a routerLink="/register">Signup</a></p>
+              </form>
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
